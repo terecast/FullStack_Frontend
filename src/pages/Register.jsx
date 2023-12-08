@@ -20,7 +20,7 @@ const Register = () => {
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    const {user, userIsLoading, isError, message, isSuccess} = useSelector((state)=> state.auth)
+    const {user, userIsLoading, isError, isSuccess, message,} = useSelector((state)=> state.auth)
     
     useEffect(()=> {
         if (isError) {
@@ -56,7 +56,7 @@ const Register = () => {
             dispatch(register(userData))
         }
     }
-    
+
     if(isLoading) {
         return <Spinner />
     }
