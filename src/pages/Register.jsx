@@ -20,7 +20,7 @@ const Register = () => {
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    const {user, userIsLoading, isError, isSuccess, message,} = useSelector((state)=> state.auth)
+    const {user, isLoading, isError, isSuccess, message,} = useSelector((state)=> state.auth)
     
     useEffect(()=> {
         if (isError) {
@@ -102,7 +102,7 @@ const Register = () => {
                         onChange={onChange}
                     />
                     <input 
-                        type="password2"
+                        type="password"
                         className="form-control"
                         id="password2"
                         name="password2"
